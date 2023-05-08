@@ -1,0 +1,111 @@
+doctype html
+html
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		link(rel="stylesheet", href="./style/header.css")
+		link(rel="stylesheet", href="./style/footer.css")
+		link(rel="stylesheet", href="./style/produce.css")
+		link(rel="icon", href="../Icons/fav/0.gif")
+		link(rel="shortcut icon", href="../Icons/fav/0.gif")
+		link(rel='preconnect' href='https://fonts.googleapis.com')
+		link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+		link(href='https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Dancing+Script:wght@400;500;600;700&family=Inspiration&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap' rel='stylesheet')
+		title CakeStudio
+		script(src="../JS/circletype.min.js", preload)
+		script(defer, src="../JS/header.js")
+		script(src='https://code.jquery.com/jquery-3.6.4.slim.js' integrity='sha256-dWvV84T6BhzO4vG6gWhsWVKVoa4lVmLnpBOZh/CAHU4=' crossorigin='anonymous')
+		script(src="https://cdn.lordicon.com/ritcuqlt.js")
+		script(src="../JS/update_page.js")
+	body
+		include ./modules/header.pug
+		.iframs
+			iframe(src='https://yandex.ru/map-widget/v1/?um=constructor%3Ab2e1d16df928abdf86df6cf20738d8d83f71676c2c9415c3aa20f655400b3959&source=constructor' width='100%' height='600px' frameborder='0')
+		.wrap_cards
+			.card
+				.card_img
+					img(src='../Images/logo.jpg', alt='logo')
+				.card_place_time
+					a.darken(href='#') Москва, Комсомольская пл., 3,
+					span Пн. – Вс.: 10:00 - 23:00
+					span по Московскому времени
+				.card_phone
+					a.black(href='tel:+78005502736') +7 (800) 550-27-36
+					a.black(href='tel:+79267493522') +7 (926) 749-35-22
+				.card_email
+					a(href='mailto:CakeStudio@gmail.com') CakeStudio@gmail.com
+			.card
+				.card_img
+					img(src='../Images/logo.jpg', alt='logo')
+				.card_place_time
+					a.darken(href='#') Московская обл, ул. Земляной Вал, 29,
+					span Пн. – Вс.: 10:00 - 23:00
+					span по Московскому времени
+				.card_phone
+					a.black(href='tel:+78003443486') +7 (800) 344-34-86
+					a.black(href='tel:+79260965341') +7 (926) 096-53-41
+				.card_email
+					a(href='mailto:CakeStudio@gmail.com') CakeStudio@gmail.com
+			.card
+				.card_img
+					img(src='../Images/logo.jpg', alt='logo')
+				.card_place_time
+					a.darken(href='#') Москва, Комсомольская пл., 2,
+					span Пн. – Вс.: 10:00 - 23:00
+					span по Московскому времени
+				.card_phone
+					a.black(href='tel:+78008811328') +7 (800) 881-13-28
+					a.black(href='tel:+79267455049') +7 (926) 745-50-49
+				.card_email
+					a(href='mailto:CakeStudio@gmail.com') CakeStudio@gmail.com
+			.card
+				.card_img
+					img(src='../Images/logo.jpg', alt='logo')
+				.card_place_time
+					a.darken(href='#') Москва, Павелецкая пл., 1,
+					span Пн. – Вс.: 10:00 - 23:00
+					span по Московскому времени
+				.card_phone
+					a.black(href='tel:+78009827433') +7 (800) 982-74-33
+					a.black(href='tel:+79261513634') +7 (926) 151-36-34
+				.card_email
+					a(href='mailto:CakeStudio@gmail.com') CakeStudio@gmail.com
+			.card
+				.card_img
+					img(src='../Images/logo.jpg', alt='logo')
+				.card_place_time
+					a.darken(href='#') Москва, пл. Тверская Застава, 7,
+					span Пн. – Вс.: 10:00 - 23:00
+					span по Московскому времени
+				.card_phone
+					a.black(href='tel:+78002517865') +7 (800) 251-78-65
+					a.black(href='tel:+79263108289') +7 (926) 310-82-89
+				.card_email
+					a(href='mailto:CakeStudio@gmail.com') CakeStudio@gmail.com
+			.card
+				.card_img
+					img(src='../Images/logo.jpg', alt='logo')
+				.card_place_time
+					a.darken(href='#') Москва, пл. Киевского Вокзала, 1,
+					span Пн. – Вс.: 10:00 - 23:00
+					span по Московскому времени
+				.card_phone
+					a.black(href='tel:+78008949082') +7 (800) 894-90-82
+					a.black(href='tel:+79268672197') +7 (926) 867-21-97
+				.card_email
+					a(href='mailto:CakeStudio@gmail.com') CakeStudio@gmail.com
+		include ./modules/footer.pug
+		script.
+			const cards = document.querySelectorAll('.card');
+			for (let i = 0; i < cards.length; i++) {
+			cards[i].addEventListener('mouseover', function() {
+				let cardPlaceTime =cards[i].querySelector('.card_place_time');
+				cardPlaceTime.style.color = '#ff7eaa';
+			});
+			
+			cards[i].addEventListener('mouseout', function() {
+				let cardPlaceTime =cards[i].querySelector('.card_place_time');
+				cardPlaceTime.style.color = ''; // set to empty string to use the default color
+			});
+			}

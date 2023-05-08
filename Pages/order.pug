@@ -1,0 +1,349 @@
+doctype html
+html
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		link(rel="stylesheet", href="./style/header.css")
+		link(rel="stylesheet", href="./style/order.css")
+		link(rel="stylesheet", href="./style/footer.css")
+		link(rel="icon", href="../Icons/fav/0.gif")
+		link(rel="shortcut icon", href="../Icons/fav/0.gif")
+		link(rel='preconnect' href='https://fonts.googleapis.com')
+		link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+		link(href='https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Dancing+Script:wght@400;500;600;700&family=Inspiration&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap' rel='stylesheet')
+		title CakeStudio
+		script(src="../JS/circletype.min.js", preload)
+		script(defer, src="../JS/header.js")
+		script(src='https://code.jquery.com/jquery-3.6.4.slim.js' integrity='sha256-dWvV84T6BhzO4vG6gWhsWVKVoa4lVmLnpBOZh/CAHU4=' crossorigin='anonymous')
+		script(src="https://cdn.lordicon.com/ritcuqlt.js")
+		script(src="../JS/update_page.js")
+	body
+		include ./modules/header.pug
+		form(action='')
+			.order_wrap
+				.order_wrap_title
+					h1.order_title Оформление заказа
+					.order_title_subwrap
+						a(href='./index.html')
+							span.title_subwrap Главная
+						a(href='./order.html')
+							span.title_subwrap Оформление заказа
+				.buyer_type_wrap
+					.buyer_type_title
+						h2.buyer_title Тип покупателя и регион доставки
+					.buyer_type_radio
+						input(type='radio' id='fiz_face' name='face' value='fiz_face' checked)
+						label(for='fiz_face') Физическое лицо
+						input(type='radio' id='juridic_face' name='face' value='juridic_face')
+						label(for='juridic_face') Юридическое лицо
+						hr
+					.buyer_type_city_search
+						span.city Город(выберите город доставки)
+						select#selectItem
+							option#chelyabinsk Челябинск
+							option#moskva Москва
+							option#piter Санкт-Петербург
+							option#nnovgor Нижний Новгород
+						.containerss
+							.chelyabinsk
+								span.small Тел.:
+								|  +7(351) 268-21-19
+								br
+								span.small Email:
+								a(href='mailto:CakeStudio@gmail.com')  CakeStudio@gmail.com
+								br
+								span.small Адрес: г. Челябинск, ул.Привокзальная, 1				
+							.moskva
+								span.small Тел.:
+								|  +7(495) 262-91-43
+								br
+								span.small Email:
+								a(href='mailto:CakeStudio@gmail.com')  CakeStudio@gmail.com
+								br
+								span.small Адрес: г. Москва, пл.Комсомольская, 3	
+							.piter
+								span.small Тел.:
+								|  +7(800) 775-00-00
+								br
+								span.small Email:
+								a(href='mailto:CakeStudio@gmail.com')  CakeStudio@gmail.com
+								br
+								span.small Адрес: г. Санкт-Петербург, ул.Загородный проспект, 52	
+							.nnovgor
+								span.small Тел.:
+								|  +7(831) 248-28-00
+								br
+								span.small Email:
+								a(href='mailto:CakeStudio@gmail.com')  CakeStudio@gmail.com
+								br
+								span.small Адрес: г. Нижний Новгород, пл. Революции, 2А
+				.order_wrap.sections
+					.order_delivery_way_section
+						h2.delivery_section_title Способ доставки
+						div
+							input(type='radio' name='delivery_way' id='pickup' checked)
+							label(for='pickup').delivery_pickup Самовывоз
+						br
+						span.delivery_way_descr бесплатно
+						.company_delivery_descr
+							p Вы можете самостоятельно забрать заказ из нашего магазина.
+						div
+							input(type='radio' name='delivery_way' id='courier')
+							label(for='courier').delivery_courier Курьер
+						br
+						span.delivery_way_descr 150 ₽
+						.company_delivery_descr
+							p Курьер доставит ваш заказ к вашему вагону.
+					.order_pay_method_section
+						h2.pay_method_title Способ оплаты
+						div
+							input(type='radio' name='pay_method' id='cash')
+							label(for='cash').pay_method_cash Безналичный расчёт + наличный
+						div
+							input(type='radio' name='pay_method' id='credit_card' checked)
+							label(for='credit_card').pay_method_credit_card Банковские карты
+						.pay_method_credit_card_descr
+							p После оформления заказа вам будут предоставлены все реквизиты для оплаты заказа
+						.pay_method_cash_descr
+							p Вы вносите предоплату 30% по карте. При получении товара вы платите 70% суммы наличными.
+				.client_section_wrap
+					h2.client_section_title Покупатель
+					div
+						label.client_section_label.tab(for='fio') Ф.И.О.
+						input.client_section_fio.mutual(type='text' size='40' autocomplete='name' placeholder='Иванов Антон Вальеревич' required name='buyer_and_check' id='fio')
+					br
+					div
+						label.client_section_label(for='email') E-Mail
+						input.client_section_email.mutual(type='text' size='40' autocomplete='email' placeholder='anton_ivanovich@gmail.com' required name='buyer_and_check' id='email')
+					br
+					div
+						label.client_section_label(for='phone') Телефон
+						input.client_section_email.mutual(type='tel' size='40' autocomplete='tel' placeholder='+79613815648' required name='buyer_and_check' id='phone')
+					br
+					div
+						label.client_section_label(for='myDatetime') Дата самовывоза
+						input.client_section_datetime.mutual(type='datetime-local' size='40' min='' placeholder='Выберите дату самовывоза и примерное время' required name='buyer_and_check' id='myDatetime')
+					br
+					div
+						label.client_section_label(for='train') Номер поезда
+						input.client_section_train.mutual(type='text' size='40' min='' placeholder='№ поезда' required name='buyer_and_check' id='train')
+					br
+					div
+						label.client_section_label(for='station') Станция получения
+						input.client_section_station.mutual(type='text' size='40' min='' placeholder='Название станции' required name='buyer_and_check' id='station')
+					br
+					div.add_info(style='display:none;')
+						label.client_section_label(for='vagon') Номер вагона
+						input.client_section_vagon.mutual(type='text' size='40' min='' placeholder='Номер вагона' required name='buyer_and_check' id='vagon')
+					br
+					div
+						label.client_section_label_comment(for='comment') Комментарии к заказу:
+						textarea.client_section_comment(placeholder='Я только что приобрел торт в вашей кондитерской, и я должен сказать, что он был просто великолепен! Я наслаждался каждой крошкой, и даже после того, как торт был съеден, я продолжал наслаждаться его вкусом в своих воспоминаниях. Я хотел бы выразить свою благодарность за вашу работу и за то, что вы продолжаете готовить только самые вкусные и качественные торты. Ваш торт действительно настоящее искусство! Я обязательно буду рекомендовать вашу кондитерскую своим друзьям и семье. Спасибо вам за то, что вы делаете, и я надеюсь скоро вернуться к вам за еще одним потрясающим тортом!' name='buyer_and_check' id='comment')
+				.items_in_basket
+					.items_in_basket_title_wrap
+						h2.items_in_basket_title Товары в заказе
+						a(href='./basket.html')
+							span Изменить
+					table.items_in_basket_table
+						tr.items_table_tr
+							td.items_table_td.items_table_td_title_properties(style='padding-bottom:5px;')
+								.items_table_td_title Наименование
+							td.items_table_td.items_table_td_title_properties(style='padding-bottom:5px;')
+								.items_table_td_title Скидка
+							td.items_table_td.items_table_td_title_properties(style='padding-bottom:5px;')
+								.items_table_td_title Цена
+							td.items_table_td.items_table_td_title_properties(style='padding-bottom:5px;')
+								.items_table_td_title Количество
+							td.items_table_td.items_table_td_title_properties(style='padding-bottom:5px;')
+								.items_table_td_title Сумма
+						tr.items_table_tr
+							td.items_table_td(style='min-width: 300px;')
+								.items_table_block
+									.items_table_block_img
+										a(href='./item.html')
+											.items_table_block_img_container
+									.items_table_item_content
+										.items_table_item_title
+											a(href='./item.html') Торт Розочки для мамы
+										.items_table_container_scu
+											.items_table_td_title(style='text-align:left;') Выбрать начинку
+											.items_table_td_text(style='text-align:left;') Тирамису
+							td.items_table_td
+								span.items_table_td_text 18%
+							td.items_table_td
+								.items_table_td_text
+									strong.item_price 1 623 ₽
+									strong.item_price_old 1 990 ₽
+							td.items_table_td
+								.items_table_td_text
+									span 3 кг
+							td.items_table_td
+								.items_table_td_text
+									strong.item_price.all 4 869 ₽
+									strong.item_price_old 5 970 ₽
+						tr.services_order_item
+							td.services_order_item_info(colspan='4')
+								.services_order_item_info_inner
+									span.services_order_item_title Упаковочная коробка
+									span.services_order_item_x x
+									span.services_order_item_quantity 1 шт
+							td.services_order_item_price
+								span.price.font-bold 192 ₽
+								span.price_discount 200 ₽
+						tr.services_item_tr_padding
+							td.services_item_td_padding(colspan='5')
+				.final_block
+					label.toggler-wrapper.style-1 
+						input(type='checkbox')
+						.toggler-slider
+							.toggler-knob
+					span Я согласен на обработку персональных данных
+				.final_button
+					button#myBtn(value='Оформить заказ') Оформить заказ
+
+					#myModal.modal
+						.modal-content
+							.modal-header
+								span.close &times;
+								h2 Заказ успешно оформлен
+							.modal-body
+								.cont
+									svg(viewBox='0 0 48 48' xmlns='http://www.w3.org/2000/svg')
+										path(d='M 18 32.34 l -8.34 -8.34 -2.83 2.83 11.17 11.17 24 -24 -2.83 -2.83 z' stroke='#3da35a' fill='transparent')
+							.modal-footer
+								p Электронный чек выслан вам на почту.
+		include ./modules/footer.pug					
+
+									
+
+		script(type='text/javascript').
+			$( function() {
+				if (localStorage.getItem("myKey")) {
+					var stored_select = localStorage.getItem("myKey");
+					$('#' + stored_select).prop( "selected", true );
+					$('.' + stored_select).show();
+				} else {
+					$('.chelyabinsk').show();
+				}
+			});
+			$("#selectItem").change(function(){
+				$('.containerss').find('div').hide();
+				var selected = $('#selectItem option:selected').attr('id');
+				localStorage.setItem("myKey", selected);
+				$('.' + selected).show();
+			});
+			
+			var currentDate = new Date();
+			var dateString = currentDate.toISOString().substring(0,16);
+			document.getElementById("myDatetime").setAttribute("min", dateString);
+
+
+			// Get references to the radio buttons and divs
+			const cashRadio = document.getElementById('cash');
+			const creditCardRadio = document.getElementById('credit_card');
+			const cashDiv = document.querySelector('.pay_method_cash_descr');
+			const creditCardDiv = document.querySelector('.pay_method_credit_card_descr');
+				// Add event listeners to the radio buttons
+			cashRadio.addEventListener('change', function() {
+				creditCardDiv.style.display = 'none';
+				cashDiv.style.display = 'block';
+			});
+
+			creditCardRadio.addEventListener('change', function() {
+				cashDiv.style.display = 'none';
+				creditCardDiv.style.display = 'block';
+			});
+
+
+				// Get the modal
+				var modal = document.getElementById("myModal");
+
+				// Get the button that opens the modal
+				var btn = document.getElementById("myBtn");
+
+				// Get the <span> element that closes the modal
+				var span = document.getElementsByClassName("close")[0];
+
+				// When the user clicks the button, open the modal 
+				btn.onclick = function() {
+					let input_s = document.querySelectorAll('.mutual');
+					let last_elm=input_s[input_s.length-1];
+					let parentElm = last_elm.parentElement;
+		
+					if(parentElm.style.display==='none'){
+						let count = input_s.length-2;
+						for(let i =0; i<input_s.length-2;i++){
+							if(input_s[i].value == ''){
+								count--;
+							}
+						}
+				
+						if(count==input_s.length-2){
+							modal.style.display = "block";
+						}
+					}else{
+						let count = input_s.length-1;
+					
+						for(let i =0; i<input_s.length-1;i++){
+							if(input_s[i].value == ''){
+								count--;
+							}
+						}
+			
+						if(count==input_s.length-1){
+							  modal.style.display = "block";
+						}
+					}	
+				}
+
+				// When the user clicks on <span> (x), close the modal
+				span.onclick = function() {
+				modal.style.display = "none";
+				}
+
+				// When the user clicks anywhere outside of the modal, close it
+				window.onclick = function(event) {
+				if (event.target == modal) {
+					modal.style.display = "none";
+				}
+				}	
+
+				var button = document.querySelector('#myBtn');
+				var container = document.querySelector('.cont');
+				var checkmark = document.querySelector('svg');
+				var className = "animate";
+
+				button.addEventListener('click', function(){
+				if (!checkmark.classList.contains(className)) {
+					checkmark.classList.add(className);
+					
+					setTimeout(function(){      
+						checkmark.classList.remove(className);
+					}, 1700);  
+				} 
+				});
+
+				const courier = document.getElementById('courier');
+				const pickup = document.getElementById('pickup');
+
+				courier.addEventListener('change', function(){
+				  const date_time = document.querySelectorAll('.client_section_label');
+
+					date_time.forEach(time => {
+						if(time.innerHTML=='Дата самовывоза'){
+							time.innerHTML = 'Дата доставки';
+						}
+					});
+					document.querySelector('.add_info').style.display='block';
+				});
+
+				pickup.addEventListener('change',function(){
+					const date_time = document.querySelectorAll('.client_section_label');
+					date_time.forEach(time => {
+						if(time.innerHTML=='Дата доставки'){
+							time.innerHTML = 'Дата самовывоза';
+						}
+					});
+					document.querySelector('.add_info').style.display='none';
+				});

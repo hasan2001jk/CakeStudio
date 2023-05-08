@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/header.css">
+    <link rel="stylesheet" href="./style/footer.css">
+    <link rel="stylesheet" href="./style/auth.css">
+    <link rel="icon" href="../Icons/fav/0.gif">
+    <link rel="shortcut icon" href="../Icons/fav/0.gif">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&amp;family=Dancing+Script:wght@400;500;600;700&amp;family=Inspiration&amp;family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&amp;family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap" rel="stylesheet">
+    <title>CakeStudio</title>
+    <script src="../JS/circletype.min.js" preload></script>
+    <script defer src="../JS/header.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.slim.js" integrity="sha256-dWvV84T6BhzO4vG6gWhsWVKVoa4lVmLnpBOZh/CAHU4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+    <script src="../JS/update_page.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header_wrapper">
+        <div class="header_logo"><img src="../Logo/Photographer-Arranging.svg" alt="Logo"><a href="./index.html" id="logo_text">Cake of your dreams</a></div>
+        <div class="header_menu">
+          <div class="header_menu_category">
+            <ul>
+              <li><a href="./news.html">новости</a></li>
+              <li><a href="./production.html">продукция</a></li>
+              <li><a href="./o_nas.html">о нас</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="auth_wrapper">
+          <div class="dropdown">
+            <lord-icon class="dropdown-toggle" src="https://cdn.lordicon.com/ajkxzzfb.json" trigger="morph" colors="primary:#ffc738,secondary:#4bb3fd" state="morph-group" style="width:40px;height:40px"></lord-icon>
+            <div class="dropdown-content">
+              <div class="dropdown-content-wrapper">
+                <div class="dropdown-content-item"><a class="sign-in" href="./auth.html">Войти</a><a class="join-in" href="./registration.html">Регистрация</a></div>
+                <div class="dropdown-content-item"><img class="close-icon" src="../Icons/close.png" alt="close"></div>
+              </div>
+              <div class="dropdown-content-wrapper_info">
+                <div class="dropdown-content-wrapper_info_all"><img class="hover_img" src="../Icons/my_account_WB.png" alt="My Account"><a class="hover_text" href="./my_account.html" target="_blank">мой аккаунт</a></div>
+              </div>
+              <div class="dropdown-content-wrapper_info">
+                <div class="dropdown-content-wrapper_info_all"><img class="hover_img" src="../Icons/wedding_cake.png" alt="My Orders"><a class="hover_text" href="./my_orders.html" target="_blank">мои заказы</a></div>
+              </div>
+              <div class="dropdown-content-wrapper_info">
+                <div class="dropdown-content-wrapper_info_all"><img class="hover_img" src="../Icons/credit-card.png" alt="Payment"><a class="hover_text" href="./payment_method.html" target="_blank">Оплата</a></div>
+              </div>
+              <div class="dropdown-content-wrapper_info">
+                <div class="dropdown-content-wrapper_info_all"><img class="hover_img" src="../Icons/sms.png" alt="Contact Preferences"><a class="hover_text" href="./contact_preferences.html" target="_blank">Контакты</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="drop">
+            <lord-icon class="drop-toggle" src="https://cdn.lordicon.com/lpddubrl.json" trigger="hover" style="width:40px;height:40px"></lord-icon>
+            <div class="drop-content">
+              <div class="drop_wrap_st">
+                <div class="drop_wrap_title">
+                  <p>Моя корзина,</p><span>1 шт</span>
+                </div>
+                <div class="drop_wrap_icon"><img class="close-ico" src="../Icons/close.png" alt="close"></div>
+              </div>
+              <div class="drop_wrap_nd">
+                <div class="purchase_img_wrap"><img src="../Images/Cakes/Cake_red_heart.jpg" alt="Cake Red Heart"></div>
+                <div class="purchase_text_wrap">
+                  <p>$ 35.00</p>
+                  <p>Торт "Красное сердце"</p>
+                  <p>Данный торт является популярным выбором для Дня Святого Валентина или романтических случаев</p>
+                  <p>Количество:<span>1</span></p>
+                  <div class="purchase_icon_wrap">
+                    <lord-icon class="trash_icon" src="https://cdn.lordicon.com/jmkrnisz.json" trigger="hover" colors="primary:#c71f16" state="hover-empty" style="width:20px;height:20px"></lord-icon>
+                  </div>
+                </div>
+              </div>
+              <div class="drop_wrap_rd">
+                <div class="sub_total_wrap"><span class="sub_total_wrap_title">Итого</span><span class="sub_total_wrap_price">$ 35.00</span></div>
+              </div>
+              <div class="drop_wrap_th">
+                <p class="button_view_bag"><a href="./basket.html">В корзину</a></p>
+                <p class="button_checkout_bag"><a href="./order.html">Оформить</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="wraps hover_none" id="content">
+      <!-- title_content-->
+      <div class="top-block-wrapper">
+        <section class="page-top maxwidth-theme center">
+          <div class="topic">
+            <div class="topic__inner">
+              <div class="topic__heading">
+                <h1 id="pagetitle">Авторизация</h1>
+              </div>
+            </div>
+          </div>
+          <div id="navigation">
+            <div class="breadcrumbs swipeignore" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+              <div class="breadcrumbs__item" id="bx_breadcrumb_0" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a class="breadcrumbs__link" href="./index.html" title="Главная" itemprop="item"><span class="breadcrumbs__item-name font_xs" itemprop="name">Главная</span>
+                  <meta itemprop="position" content="1"></a></div><span class="breadcrumbs__separator">—</span><span class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="index.html"></a><span><span class="breadcrumbs__item-name font_xs" itemprop="name">Авторизация</span>
+                  <meta itemprop="position" content="2"></span></span>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- end-title_content-->
+      <div class="wrapper_inner wide_page">
+        <div class="container_inner clearfix">
+          <div class="middle">
+            <div class="container">
+              <div class="maxwidth-theme">
+                <style>
+                  .personal-link[data-event] {
+                  display: none !important;
+                  }
+                  .left-menu-md,
+                  body .container.cabinte-page .maxwidth-theme .left-menu-md,
+                  .right-menu-md,
+                  body .container.cabinte-page .maxwidth-theme .right-menu-md {
+                  display: none !important;
+                  }
+                  .content-md {
+                  width: 100%;
+                  }
+                  .border_block {
+                  border: none;
+                  }
+                </style>
+                <div class="top-text" style="margin:0 0 58px 0;line-height:23px;text-align:center;">Авторизировавшись, вы сможете управлять своими личными данными, следить за состоянием заказов.<br><br></div>
+                <div class="auth-page pk-page" id="ajax_auth">
+                  <div class="auth_wrapp">
+                    <div class="wrap_md1">
+                      <div class="form">
+                        <form id="auth-page-form" name="system_auth_form6zOYVN" method="post" target="_top" action="index.html">
+                          <input type="hidden" name="backurl" value="/auth/">
+                          <input type="hidden" name="AUTH_FORM" value="Y">
+                          <input type="hidden" name="TYPE" value="AUTH">
+                          <input type="hidden" name="POPUP_AUTH" value="N">
+                          <div class="form_body">
+                            <div class="form-control">
+                              <label for="USER_LOGIN_POPUP"><span>Логин <span class="required-star">*</span></span></label>
+                              <input class="required" id="USER_LOGIN_POPUP" type="text" name="USER_LOGIN" maxlength="50" value="" autocomplete="on" tabindex="1" required>
+                            </div>
+                            <div class="form-control">
+                              <label for="USER_PASSWORD_POPUP"><span>Пароль <span class="required-star">*</span></span></label>
+                              <input class="required password" id="USER_PASSWORD_POPUP" type="password" name="USER_PASSWORD" required maxlength="50" value="" autocomplete="off" tabindex="2">
+                            </div>
+                          </div>
+                          <div class="form_footer">
+                            <div class="filter block">
+                              <div class="prompt remember pull-left onoff">
+                                <input id="USER_REMEMBER_frm" type="checkbox" name="USER_REMEMBER" value="Y" tabindex="5">
+                                <label for="USER_REMEMBER_frm" title="Запомнить меня" tabindex="5">Запомнить меня</label>
+                              </div><a class="forgot pull-right" href="./forgot_password.html" tabindex="4">Забыли пароль?</a>
+                              <div class="clearfix"></div>
+                            </div>
+                            <div class="buttons clearfix">
+                              <button class="btn btn-default btn-lg" type="submit" name="Login1" value="Y" tabindex="3"><span>Войти</span></button>
+                              <!-- noindex--><a class="btn btn-transparent-border-color btn-lg pull-right register" href="./registration.html" rel="nofollow" tabindex="6">Регистрация</a>
+                              <!-- /noindex-->
+                              <input type="hidden" name="Login" value="Y">
+                              <div class="clearboth"></div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer_wrap">
+        <div class="footer_card">
+          <div class="footer_card_title">
+            <h5>Компания</h5>
+          </div>
+          <div class="footer_card_link"><a href="./news.html">Новости</a><a href="./index.html#reviews">Отзывы</a><a href="./contacts.html">Контакты</a><a href="./credentials.html">Реквизиты</a></div>
+        </div>
+        <div class="footer_card">
+          <div class="footer_card_title">
+            <h5>Информация</h5>
+          </div>
+          <div class="footer_card_link"><a href="./produce.html">Производтства</a><a href="./delivery_and_pay.html#anchor">Оплата</a><a href="./licenses_detail.html">Политика</a></div>
+        </div>
+        <div class="footer_card">
+          <div class="footer_card_title">
+            <h5>Помощь</h5>
+          </div>
+          <div class="footer_card_link"><a href="./payment_conditions.html">Условия оплаты</a><a href="./delivery_and_pay.html">Условия доставки</a></div>
+        </div>
+      </div>
+      <div class="footer_social_wrap">
+        <hr><a class="img_one" href="https://vk.com"></a><a class="img_two" href="https://youtube.com"></a><a class="img_three" href="https://tiktok.com"></a>
+        <hr>
+      </div>
+      <div class="footer_copyright">
+        <p>2023 © Powered by Khasan Abdurakhmanov</p>
+        <div class="payment">
+          <div class="payment_one"></div>
+          <div class="payment_two"></div>
+          <div class="payment_three"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

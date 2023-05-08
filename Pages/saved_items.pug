@@ -1,0 +1,284 @@
+doctype html
+html
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		link(rel="stylesheet", href="./style/header.css")
+		link(rel="stylesheet", href="./style/footer.css")
+		link(rel="stylesheet", href="./style/saved_items.css")
+		link(rel="icon", href="../Icons/fav/0.gif")
+		link(rel="shortcut icon", href="../Icons/fav/0.gif")
+		link(rel='preconnect' href='https://fonts.googleapis.com')
+		link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+		link(href='https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Dancing+Script:wght@400;500;600;700&family=Inspiration&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap' rel='stylesheet')
+		title CakeStudio
+		script(src="../JS/circletype.min.js", preload)
+		script(defer, src="../JS/header.js")
+		script(src='https://code.jquery.com/jquery-3.6.4.slim.js' integrity='sha256-dWvV84T6BhzO4vG6gWhsWVKVoa4lVmLnpBOZh/CAHU4=' crossorigin='anonymous')
+		script(src="https://cdn.lordicon.com/ritcuqlt.js")
+		script(src="../JS/update_page.js")
+	body
+		include ./modules/header.pug
+		.wrap_sec
+			.sec_title
+				h1 Сохранненые товары
+			.sec_filter
+				select#select_filter(name="select_filter")
+					option(value="Recently added" selected) Недавно добавленные
+					option(value="Recently discounted") Последние скидки
+					option(value="Price: high to low") Цена: по убыванию
+					option(value="Price: low to high") Цена: по возрастанию
+				.itemsCount 8 шт
+			.sec_wrap_cards
+				.sec_card
+					.sec_card_img
+						button.deleteButton()
+						img(src='../Images/Cakes/Blueberry_Cheesecake_1.jpg', alt='Малиновый Чизкейк')
+					.sec_card_title
+						p Малиновый Чизкейк
+					.sec_card_price
+						span 1 625 ₽
+					hr
+					.sec_card_stuffing
+						select.select_css(size='1' name='cream' required)
+							option(value='Раффаэлло') Раффаэлло 
+								span premium.	
+							option(value='Орео') Орео 
+								span premium.
+							option(value='Мусс-малина') Мусс-малина 
+								span premium.
+							option(value='Прага') Прага 
+								span premium.
+							option(value='Три шоколада') Три шоколада 
+								span premium.
+							option(value='Трюфель') Трюфель 
+								span premium.
+							option(value='Эстерхази') Эстерхази 
+								span premium.
+							option(value='Молочная девочка') Молочная девочка  
+								span premium.
+					.sec_card_btn
+						button(type='submit') Добавить в корзину
+				.sec_card
+					.sec_card_img
+						button.deleteButton()
+						img(src='../Images/Cakes/Cake.jpg', alt='Eat Me')
+					.sec_card_title
+						p Торт "Eat Me"
+					.sec_card_price
+						span 1 350 ₽
+					hr
+					.sec_card_stuffing
+						select.select_css(size='1' name='cream' required)
+							option(value='Раффаэлло') Раффаэлло 
+								span premium.	
+							option(value='Орео') Орео 
+								span premium.
+							option(value='Мусс-малина') Мусс-малина 
+								span premium.
+							option(value='Прага') Прага 
+								span premium.
+							option(value='Три шоколада') Три шоколада 
+								span premium.
+							option(value='Трюфель') Трюфель 
+								span premium.
+							option(value='Эстерхази') Эстерхази 
+								span premium.
+							option(value='Молочная девочка') Молочная девочка  
+								span premium.
+					.sec_card_btn
+						button(type='submit') Добавить в корзину
+				.sec_card
+					.sec_card_img
+						button.deleteButton()
+						img(src='../Images/Cakes/Cake_Forever_Young.jpg', alt='Forever Young')
+					.sec_card_title
+						p Торт "Forever Young"
+					.sec_card_price
+						span 1 990 ₽
+					hr
+					.sec_card_stuffing
+						select.select_css(size='1' name='cream' required)
+							option(value='Раффаэлло') Раффаэлло 
+								span premium.	
+							option(value='Орео') Орео 
+								span premium.
+							option(value='Мусс-малина') Мусс-малина 
+								span premium.
+							option(value='Прага') Прага 
+								span premium.
+							option(value='Три шоколада') Три шоколада 
+								span premium.
+							option(value='Трюфель') Трюфель 
+								span premium.
+							option(value='Эстерхази') Эстерхази 
+								span premium.
+							option(value='Молочная девочка') Молочная девочка  
+								span premium.
+					.sec_card_btn
+						button(type='submit') Добавить в корзину
+				.sec_card
+					.sec_card_img
+						button.deleteButton()
+						img(src='../Images/Cakes/cake_magic_time.jpg', alt='Magic Time')
+					.sec_card_title
+						p Торт "Magic Time"
+					.sec_card_price
+						span 1 800 ₽
+					hr
+					.sec_card_stuffing
+						select.select_css(size='1' name='cream' required)
+							option(value='Раффаэлло') Раффаэлло 
+								span premium.	
+							option(value='Орео') Орео 
+								span premium.
+							option(value='Мусс-малина') Мусс-малина 
+								span premium.
+							option(value='Прага') Прага 
+								span premium.
+							option(value='Три шоколада') Три шоколада 
+								span premium.
+							option(value='Трюфель') Трюфель 
+								span premium.
+							option(value='Эстерхази') Эстерхази 
+								span premium.
+							option(value='Молочная девочка') Молочная девочка  
+								span premium.
+					.sec_card_btn
+						button(type='submit') Добавить в корзину
+				.sec_card
+					.sec_card_img
+						button.deleteButton()
+						img(src='../Images/Cakes/Cake_red_heart.jpg', alt='Red Heart')
+					.sec_card_title
+						p Торт "Red Heart"
+					.sec_card_price
+						span 2 150 ₽
+					hr
+					.sec_card_stuffing
+						select.select_css(size='1' name='cream' required)
+							option(value='Раффаэлло') Раффаэлло 
+								span premium.	
+							option(value='Орео') Орео 
+								span premium.
+							option(value='Мусс-малина') Мусс-малина 
+								span premium.
+							option(value='Прага') Прага 
+								span premium.
+							option(value='Три шоколада') Три шоколада 
+								span premium.
+							option(value='Трюфель') Трюфель 
+								span premium.
+							option(value='Эстерхази') Эстерхази 
+								span premium.
+							option(value='Молочная девочка') Молочная девочка  
+								span premium.
+					.sec_card_btn
+						button(type='submit') Добавить в корзину
+				.sec_card
+					.sec_card_img
+						button.deleteButton()
+						img(src='../Images/Cakes/Love.jpg', alt='Love')
+					.sec_card_title
+						p Торт "Love"
+					.sec_card_price
+						span 2 450 ₽
+					hr
+					.sec_card_stuffing
+						select.select_css(size='1' name='cream' required)
+							option(value='Раффаэлло') Раффаэлло 
+								span premium.	
+							option(value='Орео') Орео 
+								span premium.
+							option(value='Мусс-малина') Мусс-малина 
+								span premium.
+							option(value='Прага') Прага 
+								span premium.
+							option(value='Три шоколада') Три шоколада 
+								span premium.
+							option(value='Трюфель') Трюфель 
+								span premium.
+							option(value='Эстерхази') Эстерхази 
+								span premium.
+							option(value='Молочная девочка') Молочная девочка  
+								span premium.
+					.sec_card_btn
+						button(type='submit') Добавить в корзину
+				.sec_card
+					.sec_card_img
+						button.deleteButton()
+						img(src='../Images/Cakes/Mohito.jpg', alt='Mohito')
+					.sec_card_title
+						p Торт "Mohito"
+					.sec_card_price
+						span 1 890 ₽
+					hr
+					.sec_card_stuffing
+						select.select_css(size='1' name='cream' required)
+							option(value='Раффаэлло') Раффаэлло 
+								span premium.	
+							option(value='Орео') Орео 
+								span premium.
+							option(value='Мусс-малина') Мусс-малина 
+								span premium.
+							option(value='Прага') Прага 
+								span premium.
+							option(value='Три шоколада') Три шоколада 
+								span premium.
+							option(value='Трюфель') Трюфель 
+								span premium.
+							option(value='Эстерхази') Эстерхази 
+								span premium.
+							option(value='Молочная девочка') Молочная девочка  
+								span premium.
+					.sec_card_btn
+						button(type='submit') Добавить в корзину
+				.sec_card
+					.sec_card_img
+						button.deleteButton()
+						img(src='../Images/Cakes/flowers.jpg', alt='Flowers')
+					.sec_card_title
+						p Торт "Flowers"
+					.sec_card_price
+						span 1 650 ₽
+					hr
+					.sec_card_stuffing
+						select.select_css(size='1' name='cream' required)
+							option(value='Раффаэлло') Раффаэлло 
+								span premium.	
+							option(value='Орео') Орео 
+								span premium.
+							option(value='Мусс-малина') Мусс-малина 
+								span premium.
+							option(value='Прага') Прага 
+								span premium.
+							option(value='Три шоколада') Три шоколада 
+								span premium.
+							option(value='Трюфель') Трюфель 
+								span premium.
+							option(value='Эстерхази') Эстерхази 
+								span premium.
+							option(value='Молочная девочка') Молочная девочка  
+								span premium.
+					.sec_card_btn
+						button(type='submit') Добавить в корзину
+		include ./modules/footer.pug
+		script.
+			const deleteButtons = document.querySelectorAll('.sec_card button.deleteButton');
+			const itemsCount = document.querySelector('.itemsCount');
+			function updateItemCount() {
+			  itemsCount.style.transition = 'all .3s ease-in-out';
+			  itemsCount.textContent = document.querySelectorAll('.sec_card').length + ' шт';
+			}
+			
+			window.onload = updateItemCount;
+			
+			deleteButtons.forEach(button => {
+			  button.addEventListener('click', () => {
+				const card = button.closest('.sec_card');
+				card.remove();
+				const count = document.querySelectorAll('.sec_card').length;
+				itemsCount.textContent = count + ' шт';
+			  });
+			});

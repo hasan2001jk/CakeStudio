@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/header.css">
+    <link rel="stylesheet" href="./style/footer.css">
+    <link rel="stylesheet" href="./style/saved_items.css">
+    <link rel="icon" href="../Icons/fav/0.gif">
+    <link rel="shortcut icon" href="../Icons/fav/0.gif">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&amp;family=Dancing+Script:wght@400;500;600;700&amp;family=Inspiration&amp;family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&amp;family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap" rel="stylesheet">
+    <title>CakeStudio</title>
+    <script src="../JS/circletype.min.js" preload></script>
+    <script defer src="../JS/header.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.slim.js" integrity="sha256-dWvV84T6BhzO4vG6gWhsWVKVoa4lVmLnpBOZh/CAHU4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+    <script src="../JS/update_page.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header_wrapper">
+        <div class="header_logo"><img src="../Logo/Photographer-Arranging.svg" alt="Logo"><a href="./index.html" id="logo_text">Cake of your dreams</a></div>
+        <div class="header_menu">
+          <div class="header_menu_category">
+            <ul>
+              <li><a href="./news.html">новости</a></li>
+              <li><a href="./production.html">продукция</a></li>
+              <li><a href="./o_nas.html">о нас</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="auth_wrapper">
+          <div class="dropdown">
+            <lord-icon class="dropdown-toggle" src="https://cdn.lordicon.com/ajkxzzfb.json" trigger="morph" colors="primary:#ffc738,secondary:#4bb3fd" state="morph-group" style="width:40px;height:40px"></lord-icon>
+            <div class="dropdown-content">
+              <div class="dropdown-content-wrapper">
+                <div class="dropdown-content-item"><a class="sign-in" href="./auth.html">Войти</a><a class="join-in" href="./registration.html">Регистрация</a></div>
+                <div class="dropdown-content-item"><img class="close-icon" src="../Icons/close.png" alt="close"></div>
+              </div>
+              <div class="dropdown-content-wrapper_info">
+                <div class="dropdown-content-wrapper_info_all"><img class="hover_img" src="../Icons/my_account_WB.png" alt="My Account"><a class="hover_text" href="./my_account.html" target="_blank">мой аккаунт</a></div>
+              </div>
+              <div class="dropdown-content-wrapper_info">
+                <div class="dropdown-content-wrapper_info_all"><img class="hover_img" src="../Icons/wedding_cake.png" alt="My Orders"><a class="hover_text" href="./my_orders.html" target="_blank">мои заказы</a></div>
+              </div>
+              <div class="dropdown-content-wrapper_info">
+                <div class="dropdown-content-wrapper_info_all"><img class="hover_img" src="../Icons/credit-card.png" alt="Payment"><a class="hover_text" href="./payment_method.html" target="_blank">Оплата</a></div>
+              </div>
+              <div class="dropdown-content-wrapper_info">
+                <div class="dropdown-content-wrapper_info_all"><img class="hover_img" src="../Icons/sms.png" alt="Contact Preferences"><a class="hover_text" href="./contact_preferences.html" target="_blank">Контакты</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="drop">
+            <lord-icon class="drop-toggle" src="https://cdn.lordicon.com/lpddubrl.json" trigger="hover" style="width:40px;height:40px"></lord-icon>
+            <div class="drop-content">
+              <div class="drop_wrap_st">
+                <div class="drop_wrap_title">
+                  <p>Моя корзина,</p><span>1 шт</span>
+                </div>
+                <div class="drop_wrap_icon"><img class="close-ico" src="../Icons/close.png" alt="close"></div>
+              </div>
+              <div class="drop_wrap_nd">
+                <div class="purchase_img_wrap"><img src="../Images/Cakes/Cake_red_heart.jpg" alt="Cake Red Heart"></div>
+                <div class="purchase_text_wrap">
+                  <p>$ 35.00</p>
+                  <p>Торт "Красное сердце"</p>
+                  <p>Данный торт является популярным выбором для Дня Святого Валентина или романтических случаев</p>
+                  <p>Количество:<span>1</span></p>
+                  <div class="purchase_icon_wrap">
+                    <lord-icon class="trash_icon" src="https://cdn.lordicon.com/jmkrnisz.json" trigger="hover" colors="primary:#c71f16" state="hover-empty" style="width:20px;height:20px"></lord-icon>
+                  </div>
+                </div>
+              </div>
+              <div class="drop_wrap_rd">
+                <div class="sub_total_wrap"><span class="sub_total_wrap_title">Итого</span><span class="sub_total_wrap_price">$ 35.00</span></div>
+              </div>
+              <div class="drop_wrap_th">
+                <p class="button_view_bag"><a href="./basket.html">В корзину</a></p>
+                <p class="button_checkout_bag"><a href="./order.html">Оформить</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="wrap_sec">
+      <div class="sec_title">
+        <h1>Сохранненые товары</h1>
+      </div>
+      <div class="sec_filter">
+        <select id="select_filter" name="select_filter">
+          <option value="Recently added" selected>Недавно добавленные</option>
+          <option value="Recently discounted">Последние скидки</option>
+          <option value="Price: high to low">Цена: по убыванию</option>
+          <option value="Price: low to high">Цена: по возрастанию</option>
+        </select>
+        <div class="itemsCount">8 шт</div>
+      </div>
+      <div class="sec_wrap_cards">
+        <div class="sec_card">
+          <div class="sec_card_img">
+            <button class="deleteButton"></button><img src="../Images/Cakes/Blueberry_Cheesecake_1.jpg" alt="Малиновый Чизкейк">
+          </div>
+          <div class="sec_card_title">
+            <p>Малиновый Чизкейк</p>
+          </div>
+          <div class="sec_card_price"><span>1 625 ₽</span></div>
+          <hr>
+          <div class="sec_card_stuffing">
+            <select class="select_css" size="1" name="cream" required>
+              <option value="Раффаэлло">Раффаэлло <span>premium.	</span></option>
+              <option value="Орео">Орео <span>premium.</span></option>
+              <option value="Мусс-малина">Мусс-малина <span>premium.</span></option>
+              <option value="Прага">Прага <span>premium.</span></option>
+              <option value="Три шоколада">Три шоколада <span>premium.</span></option>
+              <option value="Трюфель">Трюфель <span>premium.</span></option>
+              <option value="Эстерхази">Эстерхази <span>premium.</span></option>
+              <option value="Молочная девочка">Молочная девочка  <span>premium.</span></option>
+            </select>
+          </div>
+          <div class="sec_card_btn">
+            <button type="submit">Добавить в корзину</button>
+          </div>
+        </div>
+        <div class="sec_card">
+          <div class="sec_card_img">
+            <button class="deleteButton"></button><img src="../Images/Cakes/Cake.jpg" alt="Eat Me">
+          </div>
+          <div class="sec_card_title">
+            <p>Торт "Eat Me"</p>
+          </div>
+          <div class="sec_card_price"><span>1 350 ₽</span></div>
+          <hr>
+          <div class="sec_card_stuffing">
+            <select class="select_css" size="1" name="cream" required>
+              <option value="Раффаэлло">Раффаэлло <span>premium.	</span></option>
+              <option value="Орео">Орео <span>premium.</span></option>
+              <option value="Мусс-малина">Мусс-малина <span>premium.</span></option>
+              <option value="Прага">Прага <span>premium.</span></option>
+              <option value="Три шоколада">Три шоколада <span>premium.</span></option>
+              <option value="Трюфель">Трюфель <span>premium.</span></option>
+              <option value="Эстерхази">Эстерхази <span>premium.</span></option>
+              <option value="Молочная девочка">Молочная девочка  <span>premium.</span></option>
+            </select>
+          </div>
+          <div class="sec_card_btn">
+            <button type="submit">Добавить в корзину</button>
+          </div>
+        </div>
+        <div class="sec_card">
+          <div class="sec_card_img">
+            <button class="deleteButton"></button><img src="../Images/Cakes/Cake_Forever_Young.jpg" alt="Forever Young">
+          </div>
+          <div class="sec_card_title">
+            <p>Торт "Forever Young"</p>
+          </div>
+          <div class="sec_card_price"><span>1 990 ₽</span></div>
+          <hr>
+          <div class="sec_card_stuffing">
+            <select class="select_css" size="1" name="cream" required>
+              <option value="Раффаэлло">Раффаэлло <span>premium.	</span></option>
+              <option value="Орео">Орео <span>premium.</span></option>
+              <option value="Мусс-малина">Мусс-малина <span>premium.</span></option>
+              <option value="Прага">Прага <span>premium.</span></option>
+              <option value="Три шоколада">Три шоколада <span>premium.</span></option>
+              <option value="Трюфель">Трюфель <span>premium.</span></option>
+              <option value="Эстерхази">Эстерхази <span>premium.</span></option>
+              <option value="Молочная девочка">Молочная девочка  <span>premium.</span></option>
+            </select>
+          </div>
+          <div class="sec_card_btn">
+            <button type="submit">Добавить в корзину</button>
+          </div>
+        </div>
+        <div class="sec_card">
+          <div class="sec_card_img">
+            <button class="deleteButton"></button><img src="../Images/Cakes/cake_magic_time.jpg" alt="Magic Time">
+          </div>
+          <div class="sec_card_title">
+            <p>Торт "Magic Time"</p>
+          </div>
+          <div class="sec_card_price"><span>1 800 ₽</span></div>
+          <hr>
+          <div class="sec_card_stuffing">
+            <select class="select_css" size="1" name="cream" required>
+              <option value="Раффаэлло">Раффаэлло <span>premium.	</span></option>
+              <option value="Орео">Орео <span>premium.</span></option>
+              <option value="Мусс-малина">Мусс-малина <span>premium.</span></option>
+              <option value="Прага">Прага <span>premium.</span></option>
+              <option value="Три шоколада">Три шоколада <span>premium.</span></option>
+              <option value="Трюфель">Трюфель <span>premium.</span></option>
+              <option value="Эстерхази">Эстерхази <span>premium.</span></option>
+              <option value="Молочная девочка">Молочная девочка  <span>premium.</span></option>
+            </select>
+          </div>
+          <div class="sec_card_btn">
+            <button type="submit">Добавить в корзину</button>
+          </div>
+        </div>
+        <div class="sec_card">
+          <div class="sec_card_img">
+            <button class="deleteButton"></button><img src="../Images/Cakes/Cake_red_heart.jpg" alt="Red Heart">
+          </div>
+          <div class="sec_card_title">
+            <p>Торт "Red Heart"</p>
+          </div>
+          <div class="sec_card_price"><span>2 150 ₽</span></div>
+          <hr>
+          <div class="sec_card_stuffing">
+            <select class="select_css" size="1" name="cream" required>
+              <option value="Раффаэлло">Раффаэлло <span>premium.	</span></option>
+              <option value="Орео">Орео <span>premium.</span></option>
+              <option value="Мусс-малина">Мусс-малина <span>premium.</span></option>
+              <option value="Прага">Прага <span>premium.</span></option>
+              <option value="Три шоколада">Три шоколада <span>premium.</span></option>
+              <option value="Трюфель">Трюфель <span>premium.</span></option>
+              <option value="Эстерхази">Эстерхази <span>premium.</span></option>
+              <option value="Молочная девочка">Молочная девочка  <span>premium.</span></option>
+            </select>
+          </div>
+          <div class="sec_card_btn">
+            <button type="submit">Добавить в корзину</button>
+          </div>
+        </div>
+        <div class="sec_card">
+          <div class="sec_card_img">
+            <button class="deleteButton"></button><img src="../Images/Cakes/Love.jpg" alt="Love">
+          </div>
+          <div class="sec_card_title">
+            <p>Торт "Love"</p>
+          </div>
+          <div class="sec_card_price"><span>2 450 ₽</span></div>
+          <hr>
+          <div class="sec_card_stuffing">
+            <select class="select_css" size="1" name="cream" required>
+              <option value="Раффаэлло">Раффаэлло <span>premium.	</span></option>
+              <option value="Орео">Орео <span>premium.</span></option>
+              <option value="Мусс-малина">Мусс-малина <span>premium.</span></option>
+              <option value="Прага">Прага <span>premium.</span></option>
+              <option value="Три шоколада">Три шоколада <span>premium.</span></option>
+              <option value="Трюфель">Трюфель <span>premium.</span></option>
+              <option value="Эстерхази">Эстерхази <span>premium.</span></option>
+              <option value="Молочная девочка">Молочная девочка  <span>premium.</span></option>
+            </select>
+          </div>
+          <div class="sec_card_btn">
+            <button type="submit">Добавить в корзину</button>
+          </div>
+        </div>
+        <div class="sec_card">
+          <div class="sec_card_img">
+            <button class="deleteButton"></button><img src="../Images/Cakes/Mohito.jpg" alt="Mohito">
+          </div>
+          <div class="sec_card_title">
+            <p>Торт "Mohito"</p>
+          </div>
+          <div class="sec_card_price"><span>1 890 ₽</span></div>
+          <hr>
+          <div class="sec_card_stuffing">
+            <select class="select_css" size="1" name="cream" required>
+              <option value="Раффаэлло">Раффаэлло <span>premium.	</span></option>
+              <option value="Орео">Орео <span>premium.</span></option>
+              <option value="Мусс-малина">Мусс-малина <span>premium.</span></option>
+              <option value="Прага">Прага <span>premium.</span></option>
+              <option value="Три шоколада">Три шоколада <span>premium.</span></option>
+              <option value="Трюфель">Трюфель <span>premium.</span></option>
+              <option value="Эстерхази">Эстерхази <span>premium.</span></option>
+              <option value="Молочная девочка">Молочная девочка  <span>premium.</span></option>
+            </select>
+          </div>
+          <div class="sec_card_btn">
+            <button type="submit">Добавить в корзину</button>
+          </div>
+        </div>
+        <div class="sec_card">
+          <div class="sec_card_img">
+            <button class="deleteButton"></button><img src="../Images/Cakes/flowers.jpg" alt="Flowers">
+          </div>
+          <div class="sec_card_title">
+            <p>Торт "Flowers"</p>
+          </div>
+          <div class="sec_card_price"><span>1 650 ₽</span></div>
+          <hr>
+          <div class="sec_card_stuffing">
+            <select class="select_css" size="1" name="cream" required>
+              <option value="Раффаэлло">Раффаэлло <span>premium.	</span></option>
+              <option value="Орео">Орео <span>premium.</span></option>
+              <option value="Мусс-малина">Мусс-малина <span>premium.</span></option>
+              <option value="Прага">Прага <span>premium.</span></option>
+              <option value="Три шоколада">Три шоколада <span>premium.</span></option>
+              <option value="Трюфель">Трюфель <span>premium.</span></option>
+              <option value="Эстерхази">Эстерхази <span>premium.</span></option>
+              <option value="Молочная девочка">Молочная девочка  <span>premium.</span></option>
+            </select>
+          </div>
+          <div class="sec_card_btn">
+            <button type="submit">Добавить в корзину</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer_wrap">
+        <div class="footer_card">
+          <div class="footer_card_title">
+            <h5>Компания</h5>
+          </div>
+          <div class="footer_card_link"><a href="./news.html">Новости</a><a href="./index.html#reviews">Отзывы</a><a href="./contacts.html">Контакты</a><a href="./credentials.html">Реквизиты</a></div>
+        </div>
+        <div class="footer_card">
+          <div class="footer_card_title">
+            <h5>Информация</h5>
+          </div>
+          <div class="footer_card_link"><a href="./produce.html">Производтства</a><a href="./delivery_and_pay.html#anchor">Оплата</a><a href="./licenses_detail.html">Политика</a></div>
+        </div>
+        <div class="footer_card">
+          <div class="footer_card_title">
+            <h5>Помощь</h5>
+          </div>
+          <div class="footer_card_link"><a href="./payment_conditions.html">Условия оплаты</a><a href="./delivery_and_pay.html">Условия доставки</a></div>
+        </div>
+      </div>
+      <div class="footer_social_wrap">
+        <hr><a class="img_one" href="https://vk.com"></a><a class="img_two" href="https://youtube.com"></a><a class="img_three" href="https://tiktok.com"></a>
+        <hr>
+      </div>
+      <div class="footer_copyright">
+        <p>2023 © Powered by Khasan Abdurakhmanov</p>
+        <div class="payment">
+          <div class="payment_one"></div>
+          <div class="payment_two"></div>
+          <div class="payment_three"></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const deleteButtons = document.querySelectorAll('.sec_card button.deleteButton');
+      const itemsCount = document.querySelector('.itemsCount');
+      function updateItemCount() {
+        itemsCount.style.transition = 'all .3s ease-in-out';
+        itemsCount.textContent = document.querySelectorAll('.sec_card').length + ' шт';
+      }
+      
+      window.onload = updateItemCount;
+      
+      deleteButtons.forEach(button => {
+        button.addEventListener('click', () => {
+      	const card = button.closest('.sec_card');
+      	card.remove();
+      	const count = document.querySelectorAll('.sec_card').length;
+      	itemsCount.textContent = count + ' шт';
+        });
+      });
+    </script>
+  </body>
+</html>

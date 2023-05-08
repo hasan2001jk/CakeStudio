@@ -1,0 +1,140 @@
+doctype html
+html
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		link(rel="stylesheet", href="./style/header.css")
+		link(rel="stylesheet", href="./style/footer.css")
+		link(rel="stylesheet", href="./style/registration.css")
+		link(rel="icon", href="../Icons/fav/0.gif")
+		link(rel="shortcut icon", href="../Icons/fav/0.gif")
+		link(rel='preconnect' href='https://fonts.googleapis.com')
+		link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+		link(href='https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Dancing+Script:wght@400;500;600;700&family=Inspiration&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap' rel='stylesheet')
+		title CakeStudio
+		script(src="../JS/circletype.min.js", preload)
+		script(defer, src="../JS/header.js")
+		script(src='https://code.jquery.com/jquery-3.6.4.slim.js' integrity='sha256-dWvV84T6BhzO4vG6gWhsWVKVoa4lVmLnpBOZh/CAHU4=' crossorigin='anonymous')
+		script(src="https://cdn.lordicon.com/ritcuqlt.js")
+		script(src="../JS/update_page.js")
+	body
+		include ./modules/header.pug
+		#content.wraps.hover_none
+			// title_content
+			.top-block-wrapper
+				section.page-top.maxwidth-theme.center
+					.topic
+						.topic__inner
+							.topic__heading
+								h1#pagetitle Регистрация
+					#navigation
+						.breadcrumbs.swipeignore(itemscope='' itemtype='http://schema.org/BreadcrumbList')
+							#bx_breadcrumb_0.breadcrumbs__item(itemprop='itemListElement' itemscope='' itemtype='http://schema.org/ListItem')
+								a.breadcrumbs__link(href='./index.html' title='Главная' itemprop='item')
+									span.breadcrumbs__item-name.font_xs(itemprop='name') Главная
+									meta(itemprop='position' content='1')
+							span.breadcrumbs__separator —
+							#bx_breadcrumb_1.breadcrumbs__item(itemprop='itemListElement' itemscope='' itemtype='http://schema.org/ListItem')
+								a.breadcrumbs__link(href='./auth.html' title='Авторизация' itemprop='item')
+									span.breadcrumbs__item-name.font_xs(itemprop='name') Авторизация
+									meta(itemprop='position' content='2')
+							span.breadcrumbs__separator —
+							span.breadcrumbs__item(itemprop='itemListElement' itemscope='' itemtype='http://schema.org/ListItem')
+								a(href='/auth/registration/')
+								span
+									span.breadcrumbs__item-name.font_xs(itemprop='name') Регистрация
+									meta(itemprop='position' content='3')
+			// end-title_content
+			.wrapper_inner.wide_page
+				.container_inner.clearfix
+					.middle
+						.container
+							.maxwidth-theme
+								style.
+									.left-menu-md, body .container.cabinte-page .maxwidth-theme .left-menu-md, .right-menu-md, body .container.cabinte-page .maxwidth-theme .right-menu-md{display:none !important;}
+									.content-md{width:100%;}
+									.border_block{border:none;}
+								.registraion-page.pk-page
+									.form
+										form#registraion-page-form(name='regform' enctype='multipart/form-data')
+											.top-text
+												| Зарегистрируйтесь, чтобы использовать все возможности личного кабинета: отслеживание заказов, настройку подписки, связи с социальными сетями и другие. Мы никогда и ни при каких условиях не разглашаем личные данные клиентов. Контактная информация будет использована только для оформления заказов и более удобной работы с сайтом.
+											input(type='hidden' name='backurl' value='/auth/')
+											input(type='hidden' name='register_submit_button' value='reg')
+											.form_body
+												input#input_LOGIN(size='30' type='hidden' value='1' name='REGISTER[LOGIN]' aria-required='true')
+												.form-control
+													label(for='input_NAME')
+														span
+															| Фамилия Имя Отчество 
+															span.star *
+													input#input_NAME(size='30' type='text' name='REGISTER[NAME]' required value='' aria-required='true')
+												.form-control
+													label(for='input_EMAIL')
+														span
+															| E-mail 
+															span.star *
+													input#input_EMAIL(size='30' type='email' name='REGISTER[EMAIL]' required value='' aria-required='true')
+												.form-control
+													label(for='input_PERSONAL_PHONE')
+														span Телефон 
+													input#input_PERSONAL_PHONE.phone_input(size='30' type='tel' name='REGISTER[PERSONAL_PHONE]' value='')
+												.form-control
+													label(for='input_PASSWORD')
+														span
+															| Пароль 
+															span.star *
+													input#input_PASSWORD.password(size='30' type='password' name='REGISTER[PASSWORD]' required value='' autocomplete='off' aria-required='true')
+													.text-block Длина пароля не менее 6 символов.
+												.form-control
+													label(for='input_CONFIRM_PASSWORD')
+														span
+															| Подтверждение пароля 
+															span.star *
+													input#input_CONFIRM_PASSWORD.confirm_password(size='30' type='password' name='REGISTER[CONFIRM_PASSWORD]' required value='' autocomplete='off' aria-required='true')
+												.clearboth
+											.form_footer
+												.licence_block.filter.label_block.onoff
+													input#licenses_register(type='checkbox' checked='' name='licenses_register' required='' value='Y' aria-required='true')
+													label(for='licenses_register')
+														| Я согласен на 
+														a.krasota(href='./licenses_detail.html' target='_blank') обработку персональных данных
+												button.btn.btn-default.btn-lg(type='submit' name='register_submit_button1' value='Y') Зарегистрироваться
+												.clearboth
+									.social_block
+		include ./modules/footer.pug
+		script.
+			let passwordInput = document.getElementById("input_PASSWORD");
+			let confirmPasswordInput = document.getElementById("input_CONFIRM_PASSWORD");
+			let submitButton = document.querySelector('.licence_block>.btn-lg');
+			
+			submitButton.addEventListener('click', function (event) {
+				let password = passwordInput.value;
+				let confirmPassword = confirmPasswordInput.value;
+				console.log('Произошло событие', event.type);
+				alert('Passwords don\'t match');
+			  	if (password === confirmPassword) {
+					// Passwords match
+			  	} else {
+					alert('SOLA');
+					// Passwords don't match
+			  	}
+			});
+			
+			passwordInput.addEventListener("input", function() {
+				  checkPasswords();
+			});
+			confirmPasswordInput.addEventListener("input", function() {
+				  checkPasswords();
+			});
+			
+			function checkPasswords() {
+				let password = passwordInput.value;
+				let confirmPassword = confirmPasswordInput.value;
+					if (password === confirmPassword) {
+						// Passwords match
+					} else{
+						
+					}
+			}

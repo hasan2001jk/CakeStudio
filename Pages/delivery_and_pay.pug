@@ -1,0 +1,83 @@
+doctype html
+html
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		link(rel="stylesheet", href="./style/header.css")
+		link(rel="stylesheet", href="./style/footer.css")
+		link(rel="stylesheet", href="./style/item.css")
+		link(rel="icon", href="../Icons/fav/0.gif")
+		link(rel="shortcut icon", href="../Icons/fav/0.gif")
+		link(rel="stylesheet", href="./style/index.css")
+		link(rel='stylesheet' type='text/css' href='./style/slick.css')
+		link(rel="preconnect", href="https://fonts.googleapis.com")
+		link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+		link(href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Dancing+Script:wght@400;500;600;700&family=Inspiration&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap", rel="preload", as="style", onload="this.onload=null;this.rel='stylesheet'")
+		title CakeStudio
+		script(src="../JS/circletype.min.js", preload)
+		script(src='https://code.jquery.com/jquery-3.6.4.slim.js' integrity='sha256-dWvV84T6BhzO4vG6gWhsWVKVoa4lVmLnpBOZh/CAHU4=' crossorigin='anonymous')
+		script(defer, src="../JS/header.js")
+		script(src="https://cdn.lordicon.com/ritcuqlt.js")
+		script(src="../JS/update_page.js")
+	body
+		include ./modules/header.pug
+		.item_pg_tabs_content(style='width:900px;')
+			h3(style='font-size:36px;padding:10px 0px 0px 10px;	font-family: \'Roboto\', sans-serif;') Доставка и оплата
+			.tabs_content_inner(style='width:100%;')
+					.item_pg_tabs_content_item.active
+						p(style='margin-bottom:10px;')
+							strong
+							strong
+								span(style='font-size: 20px; color: rgb(128, 100, 162);margin-bottom:10px;') Самовывоз:
+						p(style='font-size:14px;font-weight:300; margin-bottom:10px;')
+							strong Москва
+							| , Комсомольская пл., 3,
+							br
+							strong Московская обл
+							| , ул. Земляной Вал, 29,
+							br
+							strong Москва
+							| , Комсомольская пл., 2,
+							br
+							strong Москва
+							| , Павелецкая пл., 1,
+							br
+							strong Москва
+							| , пл. Тверская Застава, 7,
+							br
+							strong Москва
+							| , пл. Киевского Вокзала, 1,
+							br
+							strong Люберцы
+							| , Кирова 9к5, 
+							br
+							strong Троицк
+							| , Сиреневый бульвар д. 8
+						iframe(src='https://yandex.ru/map-widget/v1/?um=constructor%3Ab2e1d16df928abdf86df6cf20738d8d83f71676c2c9415c3aa20f655400b3959&source=constructor' width='100%' height='480' frameborder='0')
+						p(style='margin-bottom:10px;margin-top:10px;')
+							strong
+								span(style='font-size: 20px; color: rgb(128, 100, 162);margin-bottom:10px;') Доставка:
+						p(style='margin-bottom:10px;font-size:14px;font-weight:300')
+							| Доставляем по Москве и Московской области с 9:00 до 22:00, сумма заказа для доставки от 300 руб. Временной промежуток доставки +- 3 часа. Если Вам необходима доставка к определенному времени - сообщите об этом менеджеру при оформлении заказа. Доставка трехъярусных тортов и выше +1000 рублей к заказу, в силу сложности доставки подобных тортов. Время ожидания курьера на Вашей точке 15 минут, далее тарификация 100 руб за каждые 15 минут, убедительная просьба не опаздывать.
+						p(style='font-size:14px;font-weight:300;')
+							strong(style='margin-bottom:10px;') Доставка в пределах МКАД:
+							|  100 руб
+							br
+						p(style='font-size:14px;font-weight:300;')
+							strong
+								| Доставка по Бутово, Коммунарка, Теплый стан, Реутов, Люберцы, Троицк
+							| : 450 руб
+						p(style='font-size:14px;font-weight:300;')
+							strong За пределами МКАД: 
+							| 700 руб + 25 руб/км
+						p(style='font-size:14px;font-weight:300;')
+							strong
+								| Вы всегда можете воспользоваться услугами наших партнеров - курьерской службой Чекбокс, Достависта, Яндекс GO:
+							| от 500 - до 1500 руб, в зависимости от рассположения. Ответственность за перевозку переносится на заказчика.
+						p(style='margin-bottom:10px; margin-top:10px;')
+							strong
+								span(style='color: rgb(128, 100, 162); font-size: 20px;margin-bottom:10px;') Оплата:
+						p#anchor(style='font-size:14px;font-weight:300;')
+							| Оплата осуществляется любым удобным для Вас способом: наличными, безналичными на сайте, оплата по счету.
+		include ./modules/footer.pug

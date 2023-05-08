@@ -1,0 +1,40 @@
+doctype html
+html
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		link(rel="stylesheet", href="./style/header.css")
+		link(rel="stylesheet", href="./style/footer.css")
+		link(rel="stylesheet", href="./style/o_nas.css")
+		link(rel="icon", href="../Icons/fav/0.gif")
+		link(rel="shortcut icon", href="../Icons/fav/0.gif")
+		link(rel='preconnect' href='https://fonts.googleapis.com')
+		link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+		link(href='https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Dancing+Script:wght@400;500;600;700&family=Inspiration&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap' rel='stylesheet')
+		title CakeStudio
+		script(src="../JS/circletype.min.js", preload)
+		script(defer, src="../JS/header.js")
+		script(src='https://code.jquery.com/jquery-3.6.4.slim.js' integrity='sha256-dWvV84T6BhzO4vG6gWhsWVKVoa4lVmLnpBOZh/CAHU4=' crossorigin='anonymous')
+		script(src="https://cdn.lordicon.com/ritcuqlt.js")
+		script(src="../JS/update_page.js")
+	body
+		include ./modules/header.pug
+		#page-content.wrapper.__web-inspector-hide-shortcut__(itemscope='' itemtype='http://schema.org/WebPage')
+			main#page.home-main(role='main' itemprop='description')
+				.blog
+					.blog__inner
+						h3.blog__title О нас
+						.blog__wrapper
+							.blog__content
+								article.blog__article(role='main' itemprop='description')
+									style.
+										.text-center{text-align:center;}.text-right{text-align:right}.text-justify{text-align:justify;}
+									p
+										| Кондитерская CakeStudio - лидер по продаже эксклюзивных тортов ручной работы на заказ в Москве. Наша концепция проста: натуральные продукты, лучшие кондитеры, лучший сервис. Каждый день каждый из нас становится лучше в своем деле. Каждый день мы разрабатываем для Вас все новые и новые концепции тортов. Наши декораторы способны удивить даже самых равнодушных людей.
+									figure(style='text-align: center')
+										img(src='https://xn--90aijvkcjc.xn--p1ai/wa-data/public/shop/img/courier_services_company_397942.png')
+									p
+										| Мы обладаем собственным мощным производством. Наши технологии развиваются быстрее, чем успевают копировать конкуренты. Выбрав однажды CakeStudio, это выбор уже навсегда.
+
+		include ./modules/footer.pug

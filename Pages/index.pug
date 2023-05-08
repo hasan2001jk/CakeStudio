@@ -1,0 +1,168 @@
+- var cake_title_st = "Пьяная Вишня";
+- var cake_title_nd = "Eat Me";
+- var cake_title_rd = "Magic Time";
+
+doctype html
+html
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		link(rel="stylesheet", href="./style/header.css")
+		link(rel="stylesheet", href="./style/footer.css")
+		link(rel="stylesheet", href="./style/reviews.css")
+		link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css")
+		link(rel="stylesheet", href="./style/simple-adaptive-slider.css")
+		link(rel="icon", href="../Icons/fav/0.gif")
+		link(rel="shortcut icon", href="../Icons/fav/0.gif")
+		link(rel="stylesheet", href="./style/index.css")
+		script(src='https://code.jquery.com/jquery-3.6.4.slim.js' integrity='sha256-dWvV84T6BhzO4vG6gWhsWVKVoa4lVmLnpBOZh/CAHU4=' crossorigin='anonymous')
+		link(rel='stylesheet' type='text/css' href='./style/slick.css')
+		script(type='text/javascript' src='https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js')
+		link(rel="preconnect", href="https://fonts.googleapis.com")
+		link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+		link(href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Dancing+Script:wght@400;500;600;700&family=Inspiration&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap", rel="preload", as="style", onload="this.onload=null;this.rel='stylesheet'")
+		//- meta(http-equiv='refresh' content='0; url=http://localhost:5500/Pages/index.html')
+		//- meta(http-equiv='refresh' content='1; url=http://localhost:5500/Pages/index.html')
+		//- http://127.0.0.1:5500/Pages/index.html
+		title CakeStudio
+		script(src="../JS/circletype.min.js", preload)
+		script(defer, src="../JS/header.js")
+		script(src="https://cdn.lordicon.com/ritcuqlt.js")
+		script(src="../JS/simple-adaptive-slider.js")
+		script(src="../JS/update_page.js")
+	body
+		
+
+		include ./modules/header.pug
+		include ./modules/index_cake_cards.pug
+		include ./modules/index_video_lesson.pug
+		.popular_category
+			.popular_category_wrap
+				.popular_category_title
+					p Популярные категории тортов
+				.popular_category_card_wrap
+					.popular_category_card
+						a(href='#' target='_blank')
+							img(src="../Images/8-March.png", alt="8-March" data-text="8-Марта")
+					.popular_category_card
+						a(href='#' target='_blank')
+							img(src="../Images/kids.png", alt="kids" data-text="Детские")
+					.popular_category_card
+						a(href='#' target='_blank')
+							img(src="../Images/holiday.png", alt="holiday" data-text="Праздничные")
+					.popular_category_card
+						a(href='#' target='_blank')
+							img(src="../Images/creative.png", alt="creative" data-text="Креативные")
+				.popular_category_card_wrap
+					.popular_category_card
+						a(href='#' target='_blank')
+							img(src="../Images/bento_cake.png", alt="Bento Cake" data-text="Бенто торты")
+					.popular_category_card
+						a(href='#' target='_blank')
+							img(src="../Images/wedding.png", alt="wedding" data-text="Свадебные")
+					.popular_category_card
+						a(href='#' target='_blank')
+							img(src="../Images/vitrina_cake.png", alt="Vitrina Cake" data-text="Витринные торты")
+					.popular_category_card
+						a(href='#' target='_blank')
+							img(src="../Images/Cheescake.png", alt="Cheescake" data-text="Чизкейки")
+		.what_we_offer
+			.what_we_offer_wrap
+				.offer_card
+					.offer_card_img
+						img(src="../Icons/natural.png", alt="Natural Leaf")
+					.offer_card_title
+						h3 всё натуральное
+					.offer_card_descr
+						p Мы не дружим со словами «маргарин», «искусственный» и другими страшными словами
+				.offer_card
+					.offer_card_img
+						img(src="../Icons/dollar.png", alt="Money")
+					.offer_card_title
+						h3 Корпоративным клиентам
+					.offer_card_descr
+						p Возможна оплата по счету, пришлем все необходимые документы и подберем торт под ваши параметры
+				.offer_card
+					.offer_card_img
+						img(src="../Icons/recipe.png", alt="Recipe")
+					.offer_card_title
+						h3 Собственная рецептура
+					.offer_card_descr
+						p 9 из 10 клиентов возвращаются к нам снова. Тщательный отбор только лучших кондитеров Москвы
+				.offer_card
+					.offer_card_img
+						img(src="../Icons/takeaway.png", alt="Takeaway")
+					.offer_card_title
+						h3 Фотоотчёт
+					.offer_card_descr
+						p Отправим Вам фото готового заказа перед доставкой, чтобы Вы не беспокоились за качество заказа
+		include ./modules/index_slick_slider.pug
+		include ./modules/reviews.pug
+		include ./modules/footer.pug
+	script.
+		function showNextDiv(clickedElement) {
+			const parentDiv = clickedElement.closest('.cake_card');
+			const cakeCards = parentDiv.parentNode.querySelectorAll('.cake_card');
+			const currentCardIndex = Array.from(cakeCards).indexOf(parentDiv);
+			const childDivs = cakeCards[currentCardIndex].querySelectorAll('.cake_card_st, .cake_card_nd, .cake_card_rd, .cake_card_th');
+			let currentDivIndex = Array.from(childDivs).indexOf(clickedElement);
+			childDivs[currentDivIndex].style.display = 'none';
+			currentDivIndex = (currentDivIndex + 1) % childDivs.length;
+			childDivs[currentDivIndex].style.display = 'block';
+
+			console.log(currentCardIndex);
+		}
+
+		document.addEventListener('DOMContentLoaded', () => {
+			// инициализация слайдера
+			new ItcSimpleSlider('.itcss', {
+				loop: true,
+				autoplay: true,
+				interval: 5000,
+				swipe: true,
+			});
+		});
+
+
+		var images = document.querySelectorAll('.popular_category_card>a>img');
+
+		images.forEach(function(image) {
+			var text = image.getAttribute('data-text');
+			var span = document.createElement('span');
+			span.innerText = text;
+			span.style.display = "inline-block";
+			span.style.position = "relative";
+			span.style.bottom = "35px";
+			span.style.background = "#FFFEFE";
+			span.style.color = "#000000";
+			span.style.opacity = "0";
+			span.style.transition = "opacity 0.3s ease";
+			span.style.textAlign = "center";
+			span.style.padding="0px 10px 0px 10px";
+			span.style.whiteSpace = "nowrap";
+			image.parentNode.insertBefore(span, image.nextSibling);
+
+			image.addEventListener('mouseover', function() {
+				span.style.opacity = 1;
+			});
+
+			image.addEventListener('mouseout', function() {
+				span.style.opacity = 0;
+			});
+		});
+		
+		$(document).ready(function() {
+			const productionWrap = $('.slick-slider');
+				if (productionWrap.length) {
+					productionWrap.slick({
+					slidesToShow: 4,
+					slidesToScroll: 1,
+					autoplay: true,
+					autoplaySpeed: 5000,
+					arrows:false,
+					pauseOnHover:true,
+					infinite:true,
+				});
+			}
+		});

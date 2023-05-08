@@ -1,0 +1,108 @@
+doctype html
+html
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		link(rel="stylesheet", href="./style/header.css")
+		link(rel="stylesheet", href="./style/footer.css")
+		link(rel="stylesheet", href="./style/auth.css")
+		link(rel="icon", href="../Icons/fav/0.gif")
+		link(rel="shortcut icon", href="../Icons/fav/0.gif")
+		link(rel='preconnect' href='https://fonts.googleapis.com')
+		link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+		link(href='https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Dancing+Script:wght@400;500;600;700&family=Inspiration&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap' rel='stylesheet')
+		title CakeStudio
+		script(src="../JS/circletype.min.js", preload)
+		script(defer, src="../JS/header.js")
+		script(src='https://code.jquery.com/jquery-3.6.4.slim.js' integrity='sha256-dWvV84T6BhzO4vG6gWhsWVKVoa4lVmLnpBOZh/CAHU4=' crossorigin='anonymous')
+		script(src="https://cdn.lordicon.com/ritcuqlt.js")
+		script(src="../JS/update_page.js")
+	body
+		include ./modules/header.pug
+		#content.wraps.hover_none
+			// title_content
+			.top-block-wrapper
+				section.page-top.maxwidth-theme.center
+					.topic
+						.topic__inner
+							.topic__heading
+								h1#pagetitle Авторизация
+					#navigation
+						.breadcrumbs.swipeignore(itemscope='' itemtype='http://schema.org/BreadcrumbList')
+							#bx_breadcrumb_0.breadcrumbs__item(itemprop='itemListElement' itemscope='' itemtype='http://schema.org/ListItem')
+								a.breadcrumbs__link(href='./index.html' title='Главная' itemprop='item')
+									span.breadcrumbs__item-name.font_xs(itemprop='name') Главная
+									meta(itemprop='position' content='1')
+							span.breadcrumbs__separator —
+							span.breadcrumbs__item(itemprop='itemListElement' itemscope='' itemtype='http://schema.org/ListItem')
+								a(href='index.html')
+								span
+									span.breadcrumbs__item-name.font_xs(itemprop='name') Авторизация
+									meta(itemprop='position' content='2')
+			// end-title_content
+			.wrapper_inner.wide_page
+				.container_inner.clearfix
+					.middle
+						.container
+							.maxwidth-theme
+								style.
+									.personal-link[data-event] {
+									display: none !important;
+									}
+									.left-menu-md,
+									body .container.cabinte-page .maxwidth-theme .left-menu-md,
+									.right-menu-md,
+									body .container.cabinte-page .maxwidth-theme .right-menu-md {
+									display: none !important;
+									}
+									.content-md {
+									width: 100%;
+									}
+									.border_block {
+									border: none;
+									}
+								.top-text(style='margin:0 0 58px 0;line-height:23px;text-align:center;')
+									| Авторизировавшись, вы сможете управлять своими личными данными, следить за состоянием заказов.
+									br
+									br
+								#ajax_auth.auth-page.pk-page
+									.auth_wrapp
+										.wrap_md1
+											.form
+												form#auth-page-form(name='system_auth_form6zOYVN' method='post' target='_top' action='index.html')
+													input(type='hidden' name='backurl' value='/auth/')
+													input(type='hidden' name='AUTH_FORM' value='Y')
+													input(type='hidden' name='TYPE' value='AUTH')
+													input(type='hidden' name='POPUP_AUTH' value='N')
+													.form_body
+														.form-control
+															label(for='USER_LOGIN_POPUP')
+																span
+																	| Логин 
+																	span.required-star *
+															input#USER_LOGIN_POPUP.required(type='text' name='USER_LOGIN' maxlength='50' value='' autocomplete='on' tabindex='1' required)
+														.form-control
+															label(for='USER_PASSWORD_POPUP')
+																span
+																	| Пароль 
+																	span.required-star *
+															input#USER_PASSWORD_POPUP.required.password(type='password' name='USER_PASSWORD' required maxlength='50' value='' autocomplete='off' tabindex='2')
+													.form_footer
+														.filter.block
+															.prompt.remember.pull-left.onoff
+																input#USER_REMEMBER_frm(type='checkbox' name='USER_REMEMBER' value='Y' tabindex='5')
+																label(for='USER_REMEMBER_frm' title='Запомнить меня' tabindex='5') Запомнить меня
+															a.forgot.pull-right(href='./forgot_password.html' tabindex='4') Забыли пароль?
+															.clearfix
+														.buttons.clearfix
+															button.btn.btn-default.btn-lg(type='submit' name='Login1' value='Y' tabindex='3')
+																span Войти
+															// noindex
+															a.btn.btn-transparent-border-color.btn-lg.pull-right.register(href='./registration.html' rel='nofollow' tabindex='6') Регистрация
+															// /noindex
+															input(type='hidden' name='Login' value='Y')
+															.clearboth
+
+		include ./modules/footer.pug
+		

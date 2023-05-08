@@ -1,0 +1,223 @@
+doctype html
+html
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		link(rel="stylesheet", href="./style/header.css")
+		link(rel="stylesheet", href="./style/footer.css")
+		link(rel="stylesheet", href="./style/contact_preferences.css")
+		link(rel="icon", href="../Icons/fav/0.gif")
+		link(rel="shortcut icon", href="../Icons/fav/0.gif")
+		link(rel='preconnect' href='https://fonts.googleapis.com')
+		link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+		link(href='https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Dancing+Script:wght@400;500;600;700&family=Inspiration&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap' rel='stylesheet')
+		title CakeStudio
+		script(src="../JS/circletype.min.js", preload)
+		script(defer, src="../JS/header.js")
+		script(src='https://code.jquery.com/jquery-3.6.4.slim.js' integrity='sha256-dWvV84T6BhzO4vG6gWhsWVKVoa4lVmLnpBOZh/CAHU4=' crossorigin='anonymous')
+		script(src="https://cdn.lordicon.com/ritcuqlt.js")
+		script(src="../JS/update_page.js")
+	body
+		include ./modules/header.pug
+		.wrap_content
+			.left_side_content
+				.left_side_account
+					.left_side_account_img
+						.account_img ха
+					.left_side_account_title
+						span Привет,
+						span Хасан
+						span Абдурахманов
+				.left_side_block.mar
+					.left_side_block_img
+						img(src='../Icons/my_account_WB.png', alt='Person')
+					.left_side_block_title
+						a(href='./my_account.html') Мой кабинет
+				.left_side_block
+					.left_side_block_img
+						img(src='../Icons/wedding_cake.png', alt='Wedding Cake')
+					.left_side_block_title
+						a(href='./my_orders.html') Мои заказы
+				.left_side_block
+					.left_side_block_img
+						img(src='../Icons/online-registration.png', alt='Personal Data')
+					.left_side_block_title
+						a(href='./my_details.html') Личные данные
+				.left_side_block
+					.left_side_block_img
+						img(src='../Icons/credit-card.png', alt='Credit Card')
+					.left_side_block_title
+						a(href='./payment_method.html') Способы оплаты
+				.left_side_block.focused
+					.left_side_block_img
+						img(src='../Icons/sms.png', alt='Contacts')
+					.left_side_block_title
+						a(href='./contact_preferences.html') Контакты
+				.left_side_block
+					.left_side_block_img
+						img(src='../Icons/Heart.svg', alt='Heart')
+					.left_side_block_title
+						a(href='./saved_items.html') Сохранненые товары
+				.left_side_block
+					.left_side_block_img
+						img(src='../Icons/exit.svg', alt='Exit')
+					.left_side_block_title
+						a(href='./index.html') Выйти
+			.right_side_content
+				.right_side_col_one
+					.right_side_col_one_img
+						img(src='../Icons/sms.png', alt='Contacts')
+					.right_side_col_one_title
+						h2 Контакты
+				.right_side_col_two
+					h2.side_col_two_title Типы содержимого
+					.side_col_two_wrap
+						p Какие новости вы хотели бы услышать? Выберите свои варианты ниже, и мы будем держать вас в курсе событий.
+						button#all(type='button')
+							span Выбрать всё
+					form(action='')
+						.take_options_wrap
+							div
+								div
+									.take_option_img
+										img(src='../Images/discounts.jpg', alt='Discount')
+							.take_option_content
+								.take_option_content_wrap
+									.take_option_content_title
+										h3.content_title
+											span#preferencepromos Скидки и акции
+									p.take_option_paragraph Будьте первыми в очереди, чтобы приобрести любимые десерты дешевле.
+							.take_option_checkbox
+								.take_option_checkbox_st
+									.first_checkbox
+										label.first_checkbox_label()
+											input(name='promos' type='checkbox' value='true' checked)
+											span Email
+								.take_option_checkbox_nd
+									.second_checkbox
+										label.second_checkbox_label()
+											input(name='promos' type='checkbox' value='false')
+											span Sms
+						.take_options_wrap
+							div
+								div
+									.take_option_img
+										img(src='../Images/sweets.jpg', alt='Sweet novelties')
+							.take_option_content
+								.take_option_content_wrap
+									.take_option_content_title
+										h3.content_title
+											span#preferencepromos Сладкие новинки
+									p.take_option_paragraph Мы постоянно работаем над тем, чтобы наш ассортимент был насыщен новыми вкусами и идеями.
+							.take_option_checkbox
+								.take_option_checkbox_st
+									.first_checkbox
+										label.first_checkbox_label()
+											input(name='promos_2' type='checkbox' value='true' checked)
+											span Email
+								.take_option_checkbox_nd
+									.second_checkbox
+										label.second_checkbox_label()
+											input(name='promos_2' type='checkbox' value='false')
+											span Sms
+						.take_options_wrap
+							div
+								div
+									.take_option_img
+										img(src='../Images/exclusive_partners.jpg', alt='Exclusive Offers')
+							.take_option_content
+								.take_option_content_wrap
+									.take_option_content_title
+										h3.content_title
+											span#preferencepromos Эксклюзивные предложения
+									p.take_option_paragraph Удовлетворите свои пристрастия к сладкому с нашими восхитительными кондитерскими изысками.
+							.take_option_checkbox
+								.take_option_checkbox_st
+									.first_checkbox
+										label.first_checkbox_label()
+											input(name='promos_3' type='checkbox' value='true' checked)
+											span Email
+								.take_option_checkbox_nd
+									.second_checkbox
+										label.second_checkbox_label()
+											input(name='promos_3' type='checkbox' value='false')
+											span Sms
+						.take_options_wrap
+							div
+								div
+									.take_option_img
+										img(src='../Images/partners.jpg', alt='Partners')
+							.take_option_content
+								.take_option_content_wrap
+									.take_option_content_title
+										h3.content_title
+											span#preferencepromos Партнеры CakeStudio
+									p.take_option_paragraph Будьте в курсе эксклюзивных коллабораций и специально подобранных предложений.
+							.take_option_checkbox
+								.take_option_checkbox_st
+									.first_checkbox
+										label.first_checkbox_label()
+											input(name='promos_4' type='checkbox' value='true' checked)
+											span Email
+								.take_option_checkbox_nd
+									.second_checkbox
+										label.second_checkbox_label()
+											input(name='promos_4' type='checkbox' value='false')
+											span Sms
+						p.last_pr Чтобы изменения в ваших пожеланиях вступили в силу, может понадобиться до семи дней.
+						button.last_btn(type='submit' value='ПОДТВЕРДИТЬ' disabled) ПОДТВЕРДИТЬ
+									
+						
+
+
+				
+				
+		include ./modules/footer.pug
+		script.
+			// Get reference to the button and all checkboxes
+			const btn = document.getElementById('all');
+			const btn_title = btn.querySelector('span');
+			const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+			function checkAllCheckboxes() {
+			  for(let ch of checkboxes){
+				if(ch.checked === false){
+				  return false;
+				}
+			  }
+			  return true;
+			}
+			// Add a click event listener to the button
+			btn.addEventListener('click', function() {
+			  // Loop through all checkboxes and set their checked property to true
+				if(checkAllCheckboxes()==false){
+					checkboxes.forEach(function(checkbox) {
+						checkbox.checked = true;
+					});
+					btn_title.style.transition='all .3s ease-in-out';
+			  		btn_title.innerHTML = 'очистить';
+			  	}else{
+					checkboxes.forEach(function(checkbox) {
+						checkbox.checked = false;
+					});
+					btn_title.style.transition='all .3s ease-in-out';
+					btn_title.innerHTML = 'выбрать всё';
+				}
+			});
+
+			document.addEventListener('DOMContentLoaded', function() {
+			  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+			  const submitButton = document.querySelector('button[type="submit"]');
+			
+			  checkboxes.forEach(function(checkbox) {
+				checkbox.addEventListener('change', function() {
+				  if (this.checked) {
+					submitButton.disabled = false;
+					submitButton.style.backgroundColor='black';
+					submitButton.style.transition='all .3s ease-in-out';
+				  } else {
+					submitButton.disabled = true;
+				  }
+				});
+			  });
+			});

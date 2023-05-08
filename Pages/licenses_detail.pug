@@ -1,0 +1,63 @@
+doctype html
+html
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		link(rel="stylesheet", href="./style/header.css")
+		link(rel="stylesheet", href="./style/footer.css")
+		link(rel="stylesheet", href="./style/licenses_detail.css")
+		link(rel="icon", href="../Icons/fav/0.gif")
+		link(rel="shortcut icon", href="../Icons/fav/0.gif")
+		link(rel='preconnect' href='https://fonts.googleapis.com')
+		link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+		link(href='https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Dancing+Script:wght@400;500;600;700&family=Inspiration&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap' rel='stylesheet')
+		title CakeStudio
+		script(src="../JS/circletype.min.js", preload)
+		script(defer, src="../JS/header.js")
+		script(src='https://code.jquery.com/jquery-3.6.4.slim.js' integrity='sha256-dWvV84T6BhzO4vG6gWhsWVKVoa4lVmLnpBOZh/CAHU4=' crossorigin='anonymous')
+		script(src="https://cdn.lordicon.com/ritcuqlt.js")
+		script(src="../JS/update_page.js")
+	body
+		include ./modules/header.pug
+		#content.wraps.hover_none
+			// title_content
+			.top-block-wrapper
+				section.page-top.maxwidth-theme
+					.topic
+						.topic__inner
+							.topic__heading
+								h1#pagetitle Соглашение на обработку персональных данных
+					#navigation
+						.breadcrumbs.swipeignore(itemscope='' itemtype='http://schema.org/BreadcrumbList')
+							#bx_breadcrumb_0.breadcrumbs__item.cat_last(itemprop='itemListElement' itemscope='' itemtype='http://schema.org/ListItem')
+								a.breadcrumbs__link(href='./index.html' title='Главная' itemprop='item')
+									span.breadcrumbs__item-name.font_xs(itemprop='name') Главная
+									meta(itemprop='position' content='1')
+			// end-title_content
+			.wrapper_inner
+				.container_inner.clearfix
+					.right_block.wide_Y
+						.middle
+							.container
+								p.first_child
+									| Настоящим в соответствии с Федеральным законом № 152-ФЗ «О персональных данных» от 27.07.2006 года Вы подтверждаете свое согласие на обработку компанией CakeStudio персональных данных: сбор, систематизацию, накопление, хранение, уточнение (обновление, изменение), использование, передачу исключительно в целях продажи программного обеспечения на Ваше имя, как это описано ниже, блокирование, обезличивание, уничтожение.
+								p
+									| Компания CakeStudio гарантирует конфиденциальность получаемой информации. Обработка персональных данных осуществляется в целях эффективного исполнения заказов, договоров и иных обязательств, принятых компанией CakeStudio в качестве обязательных к исполнению.
+								p
+									| В случае необходимости предоставления Ваших персональных данных правообладателю, дистрибьютору или реселлеру программного обеспечения в целях регистрации программного обеспечения на ваше имя, вы даёте согласие на передачу ваших персональных данных. Компания CakeStudio гарантирует, что правообладатель, дистрибьютор или реселлер программного обеспечения осуществляет защиту персональных данных на условиях, аналогичных изложенным в Политике конфиденциальности персональных данных.
+								p
+									| Настоящее согласие распространяется на следующие Ваши персональные данные: фамилия, имя и отчество, адрес электронной почты, почтовый адрес доставки заказов, контактный телефон, платёжные реквизиты.
+								p
+									| Срок действия согласия является неограниченным. Вы можете в любой момент отозвать настоящее согласие, направив письменное уведомления на адрес: 
+									a(href='mailto:order@CakeStudio.net') order@CakeStudio.net
+									|  с пометкой «Отзыв согласия на обработку персональных данных».
+								p
+									| Обращаем ваше внимание, что отзыв согласия на обработку персональных данных влечёт за собой удаление Вашей учётной записи с Интернет-сайта (
+									a(href='https://CakeStudio.ru') https://CakeStudio.ru
+									| ), а также уничтожение записей, содержащих ваши персональные данные, в системах обработки персональных данных компании CakeStudio, что может сделать невозможным пользование интернет-сервисами компании CakeStudio.
+								p
+									| Гарантирую, что представленная мной информация является полной, точной и достоверной, а также что при представлении информации не нарушаются действующее законодательство Российской Федерации, законные права и интересы третьих лиц. Вся представленная информация заполнена мною в отношении себя лично.
+								p
+									| Настоящее согласие действует в течение всего периода хранения персональных данных, если иное не предусмотрено законодательством Российской Федерации.
+		include ./modules/footer.pug
